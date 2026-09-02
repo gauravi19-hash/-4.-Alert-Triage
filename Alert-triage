@@ -1,0 +1,15 @@
+## 1. Alert Prioritisation
+Screenshot: The dashboard showing all 5 alerts.
+Finding: Five security alerts were reviewed and prioritised based on severity, status, and investigation state. The Critical – Potential Data Exfiltration alert was identified as the highest-priority unresolved alert, followed by the High – Double-Extension File Creation alert. Previously closed alerts were also reviewed based on their recorded True Positive and False Positive classifications.
+
+## 2. Alert Properties
+Screenshot: Expanded Potential Data Exfiltration alert.
+Finding: The selected alert was classified as Critical and reported 5.8 GB of sent data and 5.2 GB of received data between internal host 192.168.45.66 and the destination *.zoom.us. The source was associated with the UK04/MEETINGROOM network. The high volume of traffic required further investigation to determine whether the activity represented legitimate business traffic or potential data exfiltration.
+
+## 3. Technical Investigation Evidence
+Screenshot: Double-Extension File Creation alert with its technical details.
+Finding: The High-severity alert was investigated using the affected host, user, process, file path, source URL, and MD5 hash. The file cats2025.mp4.exe used a suspicious double extension, which can be used to disguise an executable as a media file. The source URL and file hash were reviewed as additional indicators to assess the legitimacy of the file and determine the appropriate alert classification.
+
+## 4. Triage Verdict & Resolution
+Screenshot: Double-Extension File Creation showing Closed + True Positive and analyst comment.
+Finding: The investigation identified multiple indicators consistent with malicious file delivery, including the suspicious double extension, download source, and associated file hash. The activity was classified as a True Positive. The investigation findings were documented in the analyst comment and the alert was closed following the triage process.
